@@ -1,0 +1,8 @@
+<h2>Welcome to the Parking System</h2>
+{% if user.is_authenticated %}
+<p>Hello, {{ user.username }}! <a href="{% url 'logout' %}">Logout</a></p>
+<a href="{% url 'available_slots' %}">View Available Slots</a><br>
+<a href="{% url 'my_bookings' %}">My Bookings</a>
+{% else %}
+<p><a href="{% url 'login' %}">Login</a></p>
+{% endif %}

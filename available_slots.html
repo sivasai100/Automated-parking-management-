@@ -1,0 +1,6 @@
+<h2>Available Parking Slots</h2>
+<ul>
+  {% for slot in slots %}
+    <li>Slot {{ slot.slot_number }} - <a href="{% url 'book_slot' slot.id %}">Book</a></li>
+  {% endfor %}
+</ul>
